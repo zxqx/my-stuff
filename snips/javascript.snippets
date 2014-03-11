@@ -1,0 +1,84 @@
+# ---------------------------------------------------------
+# members
+ 
+snippet mem "Declare a public class member"
+/**
+ * @type {${4:Type}}
+ */
+${1:Class}.prototype.${2:memberVariable} = ${3:defaultValue};
+endsnippet
+ 
+# ---------------------------------------------------------
+# Functions and classes
+ 
+snippet mdclass "Define a module-level class"
+module.exports = $1;
+ 
+/**
+ * @constructor
+ */
+function $1()
+{
+ 
+}
+ 
+$2
+ 
+endsnippet
+ 
+snippet mdsclass "Define a module-level derived class"
+module.exports = $1;
+ 
+var extends_ = require('typedef').extends;
+ 
+extends_($1, ${2:BaseClass});
+ 
+/**
+ * @constructor
+ */
+function $1()
+{
+  $1.Super.apply(this, arguments);
+}
+ 
+$3
+ 
+endsnippet
+ 
+snippet fp "Define a class member function"
+${1:Class}.prototype.${2:function} = function($3)
+{
+  $4
+};
+ 
+endsnippet
+ 
+snippet sfp "Define a class member function that calls the base class' method"
+${1:Class}.prototype.${2:function} = function($3)
+{
+  $1.Super.prototype.$2.apply(this, arguments);
+  $4
+};
+ 
+endsnippet
+ 
+snippet sf "Define a static class function"
+${1:Class}.${2:function} = function($3)
+{
+  $4
+};
+ 
+endsnippet
+ 
+snippet f "Define an anonymous function"
+function($1) {
+  $2
+}
+endsnippet
+ 
+snippet iife "Define an IIFE"
+(function($1) {
+  $2
+})($1);
+endsnippet
+ 
