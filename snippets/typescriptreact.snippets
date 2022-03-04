@@ -1,7 +1,7 @@
 # ---------------------------------------------------------
 # TypeScript
 
-snippet pr "Create React props interface"
+snippet rp "Create React props interface"
 interface Props {
   ${1:prop}: ${2:type};
 }
@@ -10,7 +10,7 @@ endsnippet
 # ---------------------------------------------------------
 # React
 
-snippet rc "Create a React component"
+snippet rfc "Create a React component"
 export default (${1:props}) => {
   return (
     <>
@@ -18,12 +18,4 @@ export default (${1:props}) => {
     </>
   );
 }
-endsnippet
-
-snippet rsc "Create a simple React component"
-export default (${1:props}) => (
-  <>
-    ${2:component}
-  </>
-)
 endsnippet
