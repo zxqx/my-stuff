@@ -1,41 +1,29 @@
 # ---------------------------------------------------------
-# React
+# TypeScript
 
-snippet rc "Create a react component"
-import React, { Component } from 'react';
-
-export default class ${1:ComponentName} extends Component {
-  render() {
-    return (
-      <div>
-        ${2:component}
-      </div>
-    );
-  }
+snippet pr "Create React props interface"
+interface Props {
+  ${1:prop}: ${2:type};
 }
 endsnippet
 
 # ---------------------------------------------------------
-# JSDoc
+# React
 
-snippet doc
-/**
- * $1
- */
+snippet rc "Create a React component"
+export default (${1:props}) => {
+  return (
+    <>
+      ${2:component}
+    </>
+  );
+}
 endsnippet
 
-snippet param
-@param {${1:Type}} ${2:param}
-endsnippet
-
-snippet prop
-@property {${1:Type}} ${2:property}
-endsnippet
-
-snippet type
-@type {${1:Type}}
-endsnippet
-
-snippet ret
-@return {${1:Type}}
+snippet rsc "Create a simple React component"
+export default (${1:props}) => (
+  <>
+    ${2:component}
+  </>
+)
 endsnippet
