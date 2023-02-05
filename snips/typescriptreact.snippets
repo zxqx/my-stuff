@@ -12,11 +12,13 @@ endsnippet
 # React
 
 snippet rfc "Create a React component"
-export default (${1:props}) => {
+const ${1:ComponentName} = (${2:props}) => {
   return (
     <>
-      ${2:component}
+      ${3:component body}
     </>
   );
 }
+
+export default ${1:ComponentName};
 endsnippet
